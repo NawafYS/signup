@@ -1,0 +1,114 @@
+<?php require('template/header.phtml') ?>
+
+<div class="col-lg-offset-4" id="loginWrapper">
+    <div>
+        <h2>Login</h2>
+        <hr>
+        <img src="../images/loginImage.png" alt="Login-Logo"/></a>
+    </div>
+
+    <form role="form" action="../login.php" method="post" name="form1">
+        <div id="login2edWrpper">
+            <div id="e-mail">
+                <h4>E-mail</h4>
+                <input type="text" name="loginEmail" placeholder="Example@example.com" id="logintxtbox"
+                       required/>
+            </div>
+            <div id="password">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;Password</h4>
+                <input type="password" name="loginPassword" placeholder="Example1234" id="logintxtbox" required/><br/>
+                <a href="#" id="ForgotPassBtn" data-toggle="modal" data-target="#myModal2">&nbsp;&nbsp;&nbsp;Forgot
+                    Password?</a>
+            </div>
+            <div id="loginPageBtns">
+                <button type="submit" value="submit" name="logInSubmitBtn" id="LoginBtn">Login</button>
+    </form>
+
+    <button type="button" id="SignupBtn" data-toggle="modal" data-target="#myModal">SignUp</button>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-mm">
+
+            <div class="modal-content">
+                <div id="modalHeader" class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sign Up</h4>
+                </div>
+
+                <form method="post" name="form2" role="form" action="../login.php">
+                    <div class="form-group" id="formGroup">
+                        <label for="SignupTxtBox" class="control-label">&nbsp;&nbsp;E-Mail *</label><br/>
+                        <input name="signupEmail" type="email" class="form-control" id="SignupTxtBox"
+                               placeholder="Example@example.com" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="SignupTxtBox" class="control-label">&nbsp;&nbsp;Phone No.*</label><br/>
+                        <input name="phoneNo" type="text" class="form-control" id="SignupTxtBox"
+                               placeholder="074016****0" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="SignupTxtBox" class="control-label">&nbsp;&nbsp;House No.*</label><br/>
+                        <input name="houseNo" type="text" class="form-control" id="SignupTxtBox" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="SignupTxtBox" class="control-label">&nbsp;&nbsp;Street Name</label><br/>
+                        <input name="stName" type="text" class="form-control" id="SignupTxtBox"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="SignupTxtBox" class="control-label">&nbsp;&nbsp;City *</label><br/>
+                        <input name="city" type="text" class="form-control" id="SignupTxtBox" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="SignupTxtBox" class="control-label">&nbsp;&nbsp;Country *</label><br/>
+                        <input name="country" type="text" class="form-control" id="SignupTxtBox" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="SignupTxtBox" class="control-label">&nbsp;&nbsp;Postcode *</label><br/>
+                        <input name="postcode" type="text" class="form-control" id="SignupTxtBox" placeholder="E3 3FF"
+                               required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="SignupTxtBox" class="control-label">&nbsp;&nbsp;Password *</label><br/>
+                        <input name="password" type="password" class="form-control" id="SignupTxtBox"
+                               placeholder="Example1234" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="SignupTxtBox" class="control-label">&nbsp;&nbsp;Confirm Password
+                            *</label><br/>
+                        <input name="conPassword" type="password" class="form-control" id="SignupTxtBox"
+                               placeholder="Example1234" required/>
+                    </div>
+                    <div class="modal-footer">
+                        <button name="signUpSubmitBtn" type="submit" class="btn btn-lg bg-success">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<form method="post" name="form3" role="form" action="../login.php">
+    <div id="myModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-mm">
+            <div class="modal-content">
+                <div id="modalHeader" class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Enter Email</h4>
+                </div>
+                <form method="post" name="form2" role="form" action="../login.php">
+                    <div class="form-group">
+                        <label for="SignupTxtBox" class="control-label">&nbsp;&nbsp;E-Mail *</label><br/>
+                        <input name="forgotEmail" type="email" class="form-control" id="forgotEmail"
+                               placeholder="Example@example.com" required/>
+                    </div>
+                    <div class="modal-footer">
+                        <button name="forgotPassSubmitBtn" type="submit" class="btn btn-lg bg-success">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<?php require('template/footer.phtml') ?>

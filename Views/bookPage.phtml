@@ -1,0 +1,128 @@
+<?php require('template/header.phtml') ?>
+
+
+<form role="form" name="form1" action="../shop.php" method="post" id="shopForm">
+    <div id="shopMenu" class="col-lg-12">
+        <div id="shopMenu" class="container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <button name="catSubmit" type="submit" value="All" id="b"><span
+                                class="glyphicon glyphicon-list"></span> All
+                    </button>
+                </li>
+                <li>
+                    <button name="catSubmit" type="submit" value="BestSeller" id="b"><span
+                                class="glyphicon glyphicon-star"></span>Best Sellers
+                    </button>
+                </li>
+                <li>
+                    <button name="catSubmit" type="submit" value="NewReleased" id="b"><span
+                                class="glyphicon glyphicon-barcode"></span> New Released
+                    </button>
+                </li>
+                <li>
+                    <button name="catSubmit" type="submit" value="SalesBooks" id="b"> Sales Books</button>
+                </li>
+                <li><input type="text" name="searchtxtBox" placeholder="Search.." id="searchTxtbox"
+                           onkeypress="handle(event)"></li>
+                <li>
+                    <button type="submit" name="searchbtn" id="goButton">Go
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" href="#">Filter By <span
+                                class="glyphicon glyphicon-filter"></span></a>
+                    <ul class="dropdown-menu" id="submenu">
+                        <li>
+                            <button name="catSubmit" type="submit" value="book_name">Alphabetical Order</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="book_price">Price: Low To High</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="book_price DESC">Price: High To Low</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <span
+                                class="glyphicon glyphicon-chevron-down"></span></a>
+                    <ul class="dropdown-menu" id="submenu">
+                        <li>
+                            <button name="catSubmit" type="submit" value="Fiction">Fiction</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="Politics">Politics</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="Business">Business</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="Biography">Biography</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="History">History</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="Education">Education</button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</form>
+<div id="book1stDev">
+    <form id="bookPage1stForm" action="../bookPage.php" method="post">
+        <?php
+        $bookID = $view->bookDataSet->getBookID();
+        echo '<P>' . '<img src="images/' . $view->bookDataSet->getPhotoName() . '"alt="No Pic Available for this Book" />' . '</p>';
+        echo '<P>' . '<b>Name: </b>' . $view->bookDataSet->getBookName() . '</p>';
+        echo '<P>' . '<b>Author: </b>' . $view->bookDataSet->getBookAuthor() . '</p>';
+        echo '<P>' . '<b>Category: </b>' . $view->bookDataSet->getBookCategory() . '</p>';
+        echo '<P>' . '<b>Price: </b>£' . $view->bookDataSet->getBookPrice() . '</p>';
+        echo '<P>' . '<b>No. In Stock: </b>' . $view->bookDataSet->getNoInStock() . '</p>';
+        ?>
+
+
+        <input type="hidden" name="id" value="<?php echo $view->bookDataSet->getBookID() ?>">
+        <?php if (isset($_SESSION['user_id'])) {
+            echo '<p><b>Quantity Needed: </b>';
+            echo '<select name="quantity">';
+
+            for ($i = 1; $i <= 20; $i++) {
+                echo "<option value='$i'>$i</option>";
+            }
+            echo '</select>';
+            echo '</p>';
+            echo '<button name="bookPageAddBasketBtn" id="bookPageAddBasketBtn"><span class="glyphicon glyphicon-shopping-cart" id="my-glyphicon"></span> +</button>';
+        } ?>
+    </form>
+</div>
+
+<?php if (isset($_SESSION['user_id'])) {
+    echo '<div id = "book2ndDev" >';
+    echo '<form id = "bookPage2ndForm" action = "../bookPage.php" method = "post" >';
+
+    echo '<h1 > Reviews</h1 >';
+    echo '<input name = "bookID" value =' . $bookID . '  hidden = "hidden">';
+    echo '<p > Tell Us What You Think </p ><textarea id="reviewTxtArea"type = "text" name = "comment" placeholder="Type Your Comment Here.." required /></textarea>';
+    echo '<br/>';
+    echo '<button type = "submit" name = "postReviewButton" class="col-lg-offset-3" > Share</button >';
+    echo '</form >';
+    echo '</div >';
+} ?>
+
+<div id="book3rdDev">
+    <?php
+    foreach ($view->reviewDataSet as $reviewData) {
+        echo '<div id="comment" >';
+        echo '<p><b>' . $reviewData->getUserEmail() . '</b></p>';
+        echo '<p  id="commentText">' . $reviewData->getComment() . '</p>';
+        echo '</div >';
+        echo '<br/>';
+
+    }
+    ?>
+</div>
+
+<?php require('template/footer.phtml') ?>

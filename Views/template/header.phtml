@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/css/my-style.css" rel="stylesheet">
+    <link rel="icon" href="images/title icon.png"/>
+    <title>iRead | <?php echo $view->pageTitle; ?></title>
+</head>
+
+<body id="body" role="document">
+<div id="wrapper">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div id="title" class="col-sm-6">
+                <a href="../index.php"><img src="images/logo3.png" alt="Logo"/></a>
+            </div>
+            <div id="menu" class="col-lg-offset-6">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.php"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                    <li><a href="shop.php"><span class="glyphicon glyphicon-book"></span>Shop</a></li>
+                    <?php if (isset($_SESSION['user_id'])) {
+
+                        echo '<li><a href = "basket.php" ><span class="glyphicon glyphicon-shopping-cart"
+                                                        id = "my-glyphicon" ></span > Basket</a ></li >';
+                    } ?>
+
+                    <?php
+                    if (!isset($_SESSION['user_id'])) {
+                        echo '<li><a href="login.php" ><span class="glyphicon glyphicon-user"></span>LogIn</a></li>';
+                    } else if (isset($_SESSION['user_id'])) {
+
+                        echo '<li class="dropdown">
+                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>MyAccount</a> 
+                          <ul class="dropdown-menu">
+                            <li><a href="profile.php">Profile</a></li>
+                            <li><a href="logout.php">LogOut</a></li>
+                        </ul>
+                    </li>';
+                    }
+
+                    ?>
+                    <li><a href="gallery.php"><span class="glyphicon glyphicon-camera"></span>Gallery</a></li>
+                    <li><a href="#" id="ForgotPassBtn" data-toggle="modal" data-target="#askusModal"><span
+                                    class="glyphicon glyphicon-qrcode"></span>AskUs</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!--    <form method="post" name="form3" role="form" action="../login.php">-->
+    <div id="askUswrpper">
+        <div id="askusModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-mm">
+                <div class="modal-content">
+                    <div id="modalHeader" class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h5 class="modal-title" id="askusHeader">AskUs</h5>
+                    </div>
+
+                    <form method="post" name="form2" role="form" action="../index.php">
+                        <div class="form-group" div="askUsInfoTxtBoxes">
+                            <input name="nameTxtBox" type="text" class="form-control" id="askusTxtBox"
+                                   placeholder="Name" required/>
+                            <input name="emailTxtBox" type="email" class="form-control" id="askusTxtBox"
+                                   placeholder="Email" required/>
+                            <input name="phoneNumberTxtBox" type="text" class="form-control" id="askusTxtBox"
+                                   placeholder="Phone No. (Optional)"/>
+                        </div>
+                        <div>
+                            <textarea name="requestTxtArea" id="askUsTxtArea" placeholder="Type Your Enquiry Here.."
+                                      required></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button name="askusBtn" type="submit" class="btn btn-lg bg-success" id="askusBtn">Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    </form>-->
+
+    <div id="content">
+
+
+

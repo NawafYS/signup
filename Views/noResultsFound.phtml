@@ -1,0 +1,78 @@
+<?php require('template/header.phtml') ?>
+<form role="form" name="form1" action="../shop.php" method="post" id="shopForm">
+    <div id="shopMenu" class="col-lg-12">
+        <div id="shopMenu" class="container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <button name="catSubmit" type="submit" value="All" id="b"><span
+                                class="glyphicon glyphicon-list"></span> All
+                    </button>
+                </li>
+                <li>
+                    <button name="catSubmit" type="submit" value="BestSeller" id="b"><span
+                                class="glyphicon glyphicon-star"></span>Best Sellers
+                    </button>
+                </li>
+                <li>
+                    <button name="catSubmit" type="submit" value="NewReleased" id="b"><span
+                                class="glyphicon glyphicon-barcode"></span> New Released
+                    </button>
+                </li>
+                <li>
+                    <button name="catSubmit" type="submit" value="SalesBooks" id="b"> Sales Books</button>
+                </li>
+                <li><input type="text" name="searchtxtBox" placeholder="Search.." id="searchTxtbox"
+                           onkeypress="handle(event)"></li>
+                <li>
+                    <button type="submit" name="searchbtn" id="goButton">Go
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" href="#">Filter By <span
+                                class="glyphicon glyphicon-filter"></span></a>
+                    <ul class="dropdown-menu" id="submenu">
+                        <li>
+                            <button name="catSubmit" type="submit" value="book_name">Alphabetical Order</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="book_price">Price: Low To High</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="book_price DESC">Price: High To Low</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <span
+                                class="glyphicon glyphicon-chevron-down"></span></a>
+                    <ul class="dropdown-menu" id="submenu">
+                        <li>
+                            <button name="catSubmit" type="submit" value="Fiction">Fiction</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="Politics">Politics</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="Business">Business</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="Biography">Biography</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="History">History</button>
+                        </li>
+                        <li>
+                            <button name="catSubmit" type="submit" value="Education">Education</button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</form>
+
+<div id="NRF1stDiv">
+    <h1 id="NRFHeader">No Results Found!</h1>
+</div>
+
+
+<?php require('template/footer.phtml') ?>

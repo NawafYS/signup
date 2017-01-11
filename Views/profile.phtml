@@ -1,0 +1,118 @@
+<?php require('template/header.phtml') ?>
+
+<div id="profileWrapper">
+    <h2>MyProfile</h2>
+    <hr>
+    <div id="profilePersonalInfo">
+
+        <?php
+
+        echo '<h4><b>Personal Info.</b></h4>';
+        $userDataSet = new UserDataSet();
+        $userData = $userDataSet->fetchSingleUser($_SESSION['user_id'])[0];
+
+        echo '<form role="form" id="profileEmailForm" name="profileEmailForm" action="../profile.php" method="post">';
+        echo '<label>Email:&nbsp;&nbsp;</label>';
+        $email = $userData->getEmail();
+        echo $email . '&nbsp;&nbsp;';
+        echo '<input type="email" name="newEmail" placeholder="Example@example.com" required/>';
+        echo '<button type="submit" name="changeEmail">Change</button>';
+        echo '<br/>';
+        echo '</form>';
+
+        echo '<form role="form" id="profilePhoneNoForm" name="profilePhoneNoForm" action="../profile.php" method="post">';
+        echo '<label>Phone No.&nbsp;&nbsp;</label>';
+        $phoneNo = $userData->getPhoneNo();
+        echo $phoneNo . '&nbsp;&nbsp;';
+        echo '<input name="newPhoneNo" placeholder="07401688**9" required/>';
+        echo '<button type="submit" name="changePhoneNo">Change</button>';
+        echo '<br/>';
+        echo '</form>';
+
+        echo '<label>Address</label>';
+        echo '<br/>';
+
+        echo '<form role="form" id="profileHouseNoForm" name="profileHouseNoForm" action="../profile.php" method="post">';
+        echo '<div id="profileAddress">';
+        $houseNo = $userData->getHouseNo();
+        echo $houseNo . '&nbsp;&nbsp;';
+        echo '<input name="newHouseNo" placeholder="#" required/>';
+        echo '<button type="submit" name="changeHouseNo">Change</button>';
+        echo '<br/>';
+        echo '</form>';
+
+        echo '<form role="form" id="profileStNameForm" name="profileStNameForm" action="../profile.php" method="post">';
+        $streetName = $userData->getStreetName();
+        echo $streetName . '&nbsp;&nbsp;';
+        echo '<input name="newStName" placeholder="Street Name" required/>';
+        echo '<button type="submit" name="changeStName">Change</button>';
+        echo '<br/>';
+        echo '</form>';
+
+        echo '<form role="form" id="profileCityForm" name="profileCityForm" action="../profile.php" method="post">';
+        $city = $userData->getCity();
+        echo $city . '&nbsp;&nbsp;';
+        echo '<input name="newCity" placeholder="City" required/>';
+        echo '<button type="submit" name="changeCity">Change</button>';
+        echo '<br/>';
+        echo '</form>';
+
+        echo '<form role="form" id="profileCountryForm" name="profileCountryForm" action="../profile.php" method="post">';
+        $country = $userData->getCountry();
+        echo $country . '&nbsp;&nbsp;';
+        echo '<input name="newCountry"  placeholder="Country" required/>';
+        echo '<button type="submit" name="changeCountry">Change</button>';
+        echo '<br/>';
+        echo '</form>';
+
+        echo '<form role="form" id="profilePasswordForm" name="profilePasswordForm" action="../profile.php" method="post">';
+        $postCode = $userData->getPostCode();
+        echo $postCode . '&nbsp;&nbsp;';
+        echo '<input name="newPostCode" placeholder="post Code" required/>';
+        echo '<button type="submit" name="changePostCode">Change</button>';
+        echo '<br/>';
+        echo '</form>';
+        echo '</div>';
+
+        echo '<div id="profilePassword">';
+        echo '<form role="form" id="profilePasswordForm" name="profilePasswordForm" action="../profile.php" method="post">';
+        echo '<br/>';
+        echo '<label>Change Password</label>';
+        echo '<br/>';
+        $password = $userData->getPassword();
+        echo '<input name="newPassword" type="password" placeholder="New Password"  required/>';
+        echo '<input name="ConPassword" type="password" placeholder="Confirm Password"required/>';
+        echo '<br/>';
+        echo '<button type="submit" name="changePassword">Change</button>';
+        echo '</form>';
+        echo '</div>';
+        echo '<br/>';
+        echo '<hr>';
+        ?>
+    </div>
+    <div id="historySet">
+        <div id="personalHistory">
+            <?php
+            $userID = $_SESSION['user_id'];
+            $userHistoryDataSet = new UserHistoryDataSet();
+            echo '<h4><b>History</b></h4>';
+            echo '<br/>';
+            $userHistoryDataSet->fetchAllHistory($userID);
+
+            foreach ($userHistoryDataSet->fetchAllHistory($userID) as $userHistrotData) {
+                $bookID = $userHistrotData->getBookID();
+                $bookDataSet = new BookDataSet();
+                $bookData = $bookDataSet->fetchSingleBook($bookID)[0];
+                echo '<div id="userHistory">
+                    <p>' . '<img src="images/' . $bookData->getPhotoName() . '"alt="No Pic Available for this Book" width="150px" height="200px" >' . '</p>
+                    <p><b>Name:</b> ' . $bookData->getBookName() . '</p>
+                    <p><b>Author: </b>' . $bookData->getBookAuthor() . '</p>
+                    <p><b>Price: </b>£' . $bookData->getBookPrice() . '</p>
+                    <p><b>Date of Purchase: </b>' . $userHistrotData->getPurchaseDate() . '</p>
+                 </div>';
+            }
+            ?>
+        </div>
+    </div>
+</div>
+<?php require('template/footer.phtml') ?>

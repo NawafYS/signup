@@ -1,0 +1,1226 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#body {
+    background-color: #d6d6d6;
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+#title {
+    width: 20%;
+    margin-left: 200px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+#title a {
+    outline: 0;
+}
+
+#menu {
+    height: auto;
+    margin-right: 40px;
+    background-color: #F2F2F2;
+    color: #8B8B8B;
+}
+
+#menu li {
+    text-align: center;
+    border-right: 1px solid #bbb;
+
+}
+
+#menu a {
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    background-color: #F2F2F2;
+    color: #6A6A6A;
+    outline: 0;
+}
+
+#menu a span {
+    margin-left: 1%;
+    position: relative;
+}
+
+#menu a:hover {
+    color: #E1D276;
+}
+
+#content {
+
+    margin-bottom: 2%;
+    overflow: hidden;
+    width: 100%;
+    padding-right: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    border-top: solid 0px #ffffff;
+    background-color: #d6d6d6;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+}
+
+#content h3 {
+    margin-left: 37%;
+    font-size: 30px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    color: #424242;
+    margin-bottom: 10px;
+
+}
+
+#indexWrapper {
+    margin-top: -20px;
+    background-color: white;
+}
+
+#best-selling-books {
+    padding-top: 15px;
+}
+
+#myCarousel1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#myCarousel2 {
+    margin-bottom: 10px;
+}
+
+#myCarousel3 {
+    padding-bottom: 10px;
+}
+
+#myCarousel1 a {
+    outline: 0;
+}
+
+#myCarousel2 a {
+    outline: 0;
+}
+
+#myCarousel3 a {
+    outline: 0;
+}
+
+.carousel-inner img {
+    margin-left: 37%;
+    min-width: 330px;
+    max-width: 330px;
+    max-height: 480px; /* height */
+    min-height: 480px;
+}
+
+#left-carousel-control {
+    color: #31b0d5;
+}
+
+#right-carousel-control {
+    color: #31b0d5;
+}
+
+/**
+start of shop page
+ */
+.container {
+    background-color: white;
+}
+
+#shop1stDiv {
+    width: 100%;
+}
+
+#shopMenu {
+    padding-left: 0px;
+    width: 100%;
+    height: auto;
+    background-color: #F2F2F2;
+    color: #8B8B8B;
+}
+
+#shopMenu li {
+    margin-left: 5px;
+    text-align: center;
+    border-right: 0px solid #bbb;
+}
+
+#shopMenu a {
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 15px;
+    background-color: #F2F2F2;
+    color: #6A6A6A;
+    outline: 0;
+
+}
+
+#shopMenu #b {
+    padding-top: 15px;
+    font-family: "Merriweather";
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 100;
+    border: none;
+    color: #6A6A6A;
+    background-color: #F2F2F2;
+}
+
+#shopMenu button {
+    width: 180px;
+}
+
+#shopMenu a {
+    width: 180px;
+}
+
+#shopMenu #b:hover {
+    color: #b22a2f;
+}
+
+#shopMenu a:hover {
+    color: #b22a2f;
+}
+
+#goButton {
+
+    display: none;
+}
+
+#searchTxtbox {
+    margin-left: -30px;
+    outline: 0px;
+    font-family: "Merriweather";
+    width: 180px;
+    box-sizing: border-box;
+    border: 0px solid #F2F2F2;
+    border-radius: 4px;
+    font-size: 18px;
+    background-color: white;
+    background-image: url('../images/searchicon.png');
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    padding: 15px 20px 12px 40px;
+    -webkit-transition: width 0.4s;
+    transition: width 0.4s;
+
+}
+
+#searchTxtbox:focus {
+    color: #3c3c3c;
+    width: 220px;
+}
+
+#shop2edDiv {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    margin-top: 54px;
+    border-top: 2px solid #b22a2f;
+    height: auto;
+    background-color: #ffffff;
+}
+
+#shop2edDiv img {
+    width: 130px;
+    height: 180px;
+    border-radius: 30px;
+    border: solid 2px #f3f3f3;
+}
+
+#my-glyphicon {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: "FlipH";
+    filter: "FlipH";
+}
+
+#myList {
+    margin-left: 2%;
+    text-align: center;
+    background-color: white;
+}
+
+#myList a {
+    outline: 0;
+    width: 150px;
+    height: 45px;
+}
+
+#addBasketHref {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#addBasketHref:hover {
+    text-decoration: none;
+    color: #3e8f3e;
+}
+
+#bookSet {
+    margin-left: 5%;
+    font-size: 12px;
+    padding-left: 1%;
+    padding-top: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 18%;
+    float: left;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#bookSet:hover {
+    background-color: #BFE0F1;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#bookSet img {
+    margin-left: 65px;
+}
+
+.dropdown-menu {
+    font-size: 10px;
+    width: 202px;
+}
+
+#submenu button {
+    padding-top: 5px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 13.5px;
+    background-color: #ffffff;
+    width: 190px;
+    height: 30px;
+    margin-left: 0px;
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 200;
+    border: none;
+
+}
+
+#submenu button:hover {
+    color: #b22a2f;
+}
+
+/**
+end of shop page
+*/
+
+/**Start footer*/
+#footer {
+    min-height: 70px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    margin_top: 15px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #6A6A6A;
+}
+
+#footer p {
+    padding-top: 10px;
+}
+
+/**End footer*/
+
+/**
+Start Log-in page
+*/
+#loginWrapper {
+    font-size: 15px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    border-radius: 3px;
+    background-color: white;
+    margin-right: 35%;
+    height: 700px;
+    text-align: center;
+    padding-top: 5px;
+    color: #3c3c3c;
+    margin-bottom: 50px;
+}
+
+#loginWrapper h4 {
+    margin-left: -38%;
+    margin-bottom: 0;
+}
+
+#logintxtbox {
+    color: #8B8B8B;
+    margin-top: 5px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    outline: 0px;
+    width: 275px;
+    height: 45px;
+    box-sizing: border-box;
+    border: 0px solid;
+    border-radius: 4px;
+    font-size: 15px;
+    -webkit-transition: width 0.4s;
+    transition: width 0.4s;
+    background-color: #d1eff5;
+    padding: 10px;
+}
+
+#logintxtbox:focus {
+    color: #2b669a;
+    width: 60%;
+}
+
+#password {
+    margin-top: 20px;
+}
+
+#LoginBtn {
+
+    background-color: #c6c6c6;
+    outline: 0px;
+    margin-top: 20px;
+    width: 145px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    -webkit-transition: font-size 0.2s;
+    transition: font-size 0.2s;
+}
+
+#LoginBtn:hover {
+    font-size: 21px;
+    color: #2a2a2a;
+}
+
+#login2edWrpper a {
+    font-size: 11px;
+    outline: 0;
+    margin-left: -32%;
+}
+
+#login2edWrpper a:hover {
+    text-decoration: none;
+    color: #2b669a;
+}
+
+#login2edWrpper a {
+    font-size: 11px;
+    outline: 0;
+    text-decoration: none;
+}
+
+#loginPageBtns p {
+    font-size: 14px;
+    margin-left: -25%;
+
+}
+
+#cbox1 {
+    margin-top: 10px;
+}
+
+#SignupBtn {
+
+    background-color: #2a2a2a;
+    outline: 0px;
+    margin-top: 20px;
+    width: 145px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    -webkit-transition: font-size 0.2s;
+    transition: font-size 0.2s;
+    color: whitesmoke;
+}
+
+#SignupBtn:hover {
+    font-size: 21px;
+    color: whitesmoke;
+}
+
+#modalHeader {
+    text-align: center;
+    padding-left: 27%;
+}
+
+.form-group label {
+    float: left;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-top: 5px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    width: 100%;
+    padding-left: 25px;
+}
+
+#SignupTxtBox {
+    width: 275px;
+    height: 35px;
+    color: #adadad;
+    margin-top: 4px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    border: 0px none;
+    border-radius: 3px;
+    font-size: 15px;
+    -webkit-transition: width 0.4s;
+    transition: width 0.4s;
+    background-color: #dddddd;
+}
+
+#SignupTxtBox:focus {
+    color: black;
+    width: 300px;
+}
+
+.modal-footer button {
+    background-color: #c6c6c6;
+    width: 145px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 0px solid;
+    -webkit-transition: font-size 0.2s;
+    transition: font-size 0.2s;
+    color: #2a2a2a;
+}
+
+.modal-footer button:hover {
+    font-size: 21px;
+    color: #2a2a2a;
+}
+
+#myModal2 {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+/**
+End Log-in page
+*/
+
+/**
+Start Gallery
+*/
+#galleryBody {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: 33%;
+}
+
+#galleryBody {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-weight: 700;
+}
+
+.GalleryContainer {
+    margin-top: -55px;
+    font-family: "Merriweather";
+    width: 600px;
+    position: relative;
+    background-color: #d6d6d6;
+}
+
+#galleryTitle {
+    width: 600px;
+    margin-left: 100%;
+    font-size: 25px;
+}
+
+.thumbnails {
+    list-style: none;
+    font-size: 0;
+    margin-left: -2%;
+    margin-top: 25px;
+    width: 750px;
+}
+
+.thumbnails li {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 20px;
+    padding-top: -20px;
+}
+
+.thumbnails li:hover .item-hugger {
+    background: white;
+}
+
+.thumbnails li:hover .item-hugger .title {
+    color: #000;
+}
+
+.thumbnails input[name="select"] {
+    display: none;
+}
+
+.thumbnails .item-hugger {
+    position: relative;
+    height: 140px;
+    width: 150px;
+    margin: 10px 0;
+    background: #d6d6d6;
+    transition: all 150ms ease-in-out;
+    padding-top: 25px;
+    border-radius: 3px;
+
+}
+
+#smallTitle {
+    margin-top: -20px;
+    font-size: 11.5px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    display: none;
+}
+
+.thumbnails label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.thumbnails .title {
+    padding: 20px 0 0;
+    font-size: 18px;
+    color: #555;
+    transition: all 150ms linear;
+}
+
+.thumbnails .thumb-image {
+    margin-left: 25px;
+    height: 80px;
+    padding: 10px 0;
+
+}
+
+.thumbnails .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1800px;
+    height: 600px;
+    background-color: white;
+    opacity: 0;
+    transition: all 150ms linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.thumbnails .content .title {
+    font-size: 20px;
+    font-weight: 400;
+    display: inline-block;
+    color: #555;
+    border-bottom: 2px solid #fe7701;
+    text-transform: uppercase;
+    margin-left: -150px;
+}
+
+.thumbnails input[name="select"]:checked + .item-hugger {
+    height: 150px;
+    margin-bottom: -45px;
+    margin-top: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    background: white;
+    padding-top: 15px;
+    border-radius: 3px;
+}
+
+.thumbnails input[name="select"]:checked + .item-hugger #smallTitle {
+    display: block;
+
+}
+
+.thumbnails input[name="select"]:checked ~ .content {
+    opacity: 1;
+}
+
+.white-box {
+    background: white;
+    margin-top: -10px;
+    height: 650px;
+    width: 2000px;
+    border-radius: 3px;
+}
+
+/**
+End Gallery
+*/
+
+@media (min-width: 1000px) {
+    #shopMenu li {
+
+        text-align: center;
+        border-right: 0px solid #bbb;
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 1100px) {
+    #shopMenu li {
+
+        text-align: center;
+        border-right: 0px solid #bbb;
+        width: 155px;
+    }
+
+    #shopMenu a {
+
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    #shopMenu li {
+
+        text-align: center;
+        border-right: 0px solid #bbb;
+        width: 160px;
+    }
+
+    #shopMenu a {
+
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    #shopMenu li {
+
+        text-align: center;
+        border-right: 0px solid #bbb;
+        width: 175px;
+    }
+
+    #shopMenu a {
+
+        font-size: 17px;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    #shopMenu li {
+
+        text-align: center;
+        border-right: 0px solid #bbb;
+        width: 190px;
+    }
+
+    #shopMenu a {
+
+        font-size: 18px;
+    }
+
+}
+
+@media (min-width: 1500px) {
+    #shopMenu li {
+
+        text-align: center;
+        border-right: 0px solid #bbb;
+        width: 200px;
+    }
+
+    #shopMenu a {
+        font-size: 18px;
+    }
+}
+
+/**
+start Book page
+*/
+#book1stDev {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    margin-top: 54px;
+    height: 320px;
+    border-top: 2px solid #b22a2f;
+    background-color: white;
+    font-size: 14px;
+    margin-bottom: -20px;
+}
+
+#book1stDev img {
+    width: 170px;
+    height: 240px;
+    border-radius: 30px;
+    border: solid 2px #f3f3f3;
+    float: left;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#bookPage1stForm {
+    padding-top: 30px;
+    margin-left: 15px;
+}
+
+#bookPageAddBasketBtn {
+    margin-top: 0px;
+    outline: 0px;
+    background-color: #D9D9D9;
+    color: #2a6496;
+    font-size: 16px;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+#bookPageAddBasketBtn:hover {
+    color: #3e8f3e;
+    font-size: 20px;
+}
+
+#book2ndDev {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    padding-left: 35px;
+    background-color: white;
+}
+
+#book2ndDev h1 {
+    font-size: 28px;
+}
+
+#book2ndDev textarea {
+    width: 34%;
+    height: 150px;
+    margin-left: 5px;
+}
+
+#book2ndDev button {
+    margin-top: 0px;
+    outline: 0px;
+    background-color: #e6e6e6;
+    color: #2a2a2a;
+    font-size: 16px;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+#book3rdDev {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    padding-top: 20px;
+    padding-left: 45px;
+    background-color: white;
+    font-size: 15px;
+}
+
+#reviewTxtArea {
+    border-radius: 10px;
+    border: 2px solid #adadad;
+    padding: 5px;
+    font-size: 15px;
+}
+
+#comment {
+    color: #3c3c3c;
+    background-color: #f3f3f3;
+    padding: 10px;
+    width: 50%;
+    border-radius: 8px;
+}
+
+#commentText {
+    width: 750px;
+    color: #2a6496;
+    margin-top: -5px;
+    margin-left: 5px;
+}
+
+/**
+End Book page
+*/
+
+/**
+Start Basket page
+*/
+#basketWrapper {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+#baske1stDiv {
+    min-height: 350px;
+    width: 100%;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    border-bottom: 8px solid #F2F2F2;
+    border-top: 8px solid #F2F2F2;
+    background-color: white;
+    font-size: 14px;
+    float: left;
+    display: table-cell;
+}
+
+#baske1stDiv p {
+    display: block;
+}
+
+#baske1stInnerDiv {
+    width: 400px;
+    background-color: #3c3c3c;
+}
+
+#baske1stDiv img {
+    width: 150px;
+    height: 215px;
+    border-radius: 30px;
+    border: solid 2px #f3f3f3;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px;
+    float: left;
+}
+
+#editQtyBtn {
+    margin-top: 0px;
+    outline: 0px;
+    background-color: #D9D9D9;
+    color: #2a6496;
+    font-size: 11px;
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+#editQtyBtn:hover {
+    font-size: 12px;
+}
+
+#editQtyTxtBox {
+    height: 30px;
+    width: 100px;
+    color: #2a6496;
+    margin-top: 4px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    border: 0px none;
+    border-radius: 3px;
+    font-size: 15px;
+    -webkit-transition: width 0.4s;
+    transition: width 0.4s;
+    background-color: #d1eff5;
+    padding-left: 10px;
+}
+
+#deleteQtyBtn {
+    margin-top: 0px;
+    outline: 0px;
+    background-color: #B43E3A;
+    color: #ffffff;
+    font-size: 13px;
+    width: 15%;
+    height: 40px;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    margin-left: 10px;
+}
+
+#deleteQtyBtn:hover {
+    font-size: 14px;
+}
+
+#purchaseQtyBtn {
+    margin-top: 0px;
+    outline: 0px;
+    background-color: #64A564;
+    color: #ffffff;
+    font-size: 13px;
+    width: 15%;
+    height: 40px;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+#purchaseQtyBtn:hover {
+    font-size: 14px;
+}
+
+#basket2ndDiv {
+    border-bottom: 8px solid #F2F2F2;
+    border-top: 8px solid #F2F2F2;
+    display: table-cell;
+    font-size: 14px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    width: 25%;
+    background-color: #ffffff;
+    vertical-align: top;
+}
+
+#basketInnerDiv {
+    position: fixed;
+    text-align: left;
+    border: 3px solid #F2F2F2;
+    background-color: #F2F2F2;
+    height: 200px;
+    width: 250px;
+    margin: 50px;
+    border-radius: 10px;
+    padding-top: 30px;
+
+}
+
+#basketInnerDiv p {
+    text-align: center;
+}
+
+#finalButtons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#purchaseAllBtn {
+    outline: 0px;
+    background-color: #64A564;
+    width: 180px;
+    height: 35px;
+    border-radius: 10px;
+    border: 0;
+}
+
+#purchaseAllBtn:hover {
+    font-size: 15px;
+}
+
+#clearAllBtn {
+    outline: 0px;
+    background-color: #a5a5a5;
+    width: 180px;
+    height: 35px;
+    border-radius: 10px;
+    border: 0;
+}
+
+#clearAllBtn:hover {
+    font-size: 15px;
+}
+
+/**
+End Basket page
+*/
+
+/**
+Start NRF page
+*/
+#NRF1stDiv {
+    height: 420px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background-color: white;
+    text-align: center;
+}
+
+#NRFHeader {
+    padding-top: 180px;
+}
+
+/**
+End NRF page
+*/
+
+/**
+start AskUs
+*/
+#askUswrpper {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+#askusHeader {
+    padding-left: -50px;
+    margin-left: -150px;
+    font-size: 22px;
+}
+
+#askUsInfoTxtBoxes {
+    display: inline-block;
+    font-size: 15px;
+
+}
+
+#askusTxtBox {
+    width: 175px;
+    margin-left: 5px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+#askusBtn {
+    height: 40px;
+}
+
+#askUsTxtArea {
+    width: 91%;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid #adadad;
+    padding: 5px;
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+/**
+End AskUs
+*/
+
+/**
+start profile page
+*/
+#profileWrapper {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#profileWrapper h2 {
+    text-align: center;
+}
+
+#profilePersonalInfo {
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+#profilePersonalInfo label {
+    margin-top: 10px;
+}
+
+#profilePersonalInfo input {
+    font-size: 13px;
+    margin-top: 8px;
+    outline: 0px;
+    background-color: #e1e1e1;
+    width: 180px;
+    height: 25px;
+    border-radius: 5px;
+    border: 0;
+    margin-right: 5px;
+    padding-left: 5px;
+}
+
+#profilePersonalInfo button {
+    font-size: 13px;
+    margin-top: 8px;
+    outline: 0px;
+    background-color: #66afe9;
+    width: 60px;
+    height: 23px;
+    border-radius: 10px;
+    border: 0;
+}
+
+#profileAddress {
+    margin-top: -10px;
+    margin-left: 15px;
+}
+
+#profileAddress input {
+    width: 90px;
+}
+
+#profilePassword input {
+    margin-top: 0px;
+    height: 35px;
+}
+
+#profilePassword button {
+    height: 25px;
+    width: 70px;
+}
+
+#historySet {
+    margin-left: 40px;
+    height: auto;
+    background-color: white;
+}
+
+#userHistory {
+    margin-left: 4%;
+    font-size: 12px;
+    padding-left: 1%;
+    padding-top: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 18%;
+    display: inline-block;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#userHistory img {
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
+/**
+end profile page
+*/
+

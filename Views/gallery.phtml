@@ -1,0 +1,87 @@
+<?php require('template/header.phtml') ?>
+
+<body id="galleryBody">
+<div class="GalleryContainer">
+
+    <ul class="thumbnails">
+        <li class="is-active">
+            <input type="radio" name="select" id="image1" checked>
+            <div class="item-hugger">
+                <img class="thumb-image"
+                     src="../images/Trinity%20College%20Library%20-%20Dublin,%20Ireland(library1).jpg"/>
+                <div class="title" id="smallTitle">Trinity Collage Library</div>
+                <label for="image1"></label>
+            </div>
+            <div class="content">
+                <div class="item-wrapper"><img
+                            src="../images/Trinity%20College%20Library%20-%20Dublin,%20Ireland(library1).jpg"/>
+                    <div class="title">Trinity College Library, Dublin, Ireland</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="select" id="image2">
+            <div class="item-hugger">
+                <img class="thumb-image" src="../images/bookstore1.jpg"/>
+                <div class="title" id="smallTitle">Shakespeare & Company</div>
+                <label for="image2"></label>
+            </div>
+            <div class="content">
+                <div class="item-wrapper"><img src="../images/bookstore1.jpg"/>
+                    <div class="title">Shakespeare and Company, Paris, France</div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <input type="radio" name="select" id="image3">
+            <div class="item-hugger">
+                <img class="thumb-image" src="../images/bookstore2.jpg"/>
+                <div class="title" id="smallTitle">Shakespeare & Company</div>
+                <label for="image3"></label>
+            </div>
+            <div class="content">
+                <div class="item-wrapper"><img src="../images/bookstore2.jpg"/>
+                    <div class="title">Shakespeare and Company, Paris, France</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="select" id="image4">
+            <div class="item-hugger">
+                <img class="thumb-image"
+                     src="../images/Alexandria%20Library%20in%20Alexandria,%20Egypt%20(library%204)%20.jpg"/>
+                <div class="title" id="smallTitle">Alexandria Library</div>
+                <label for="image4"></label>
+            </div>
+            <div class="content">
+                <div class="item-wrapper"><img
+                            src="../images/Alexandria%20Library%20in%20Alexandria,%20Egypt%20(library%204)%20.jpg"/>
+                    <div class="title">Alexandria Library, Alexandria, Egypt</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="white-box"></div>
+</div>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-46156385-1', 'cssscript.com');
+    ga('send', 'pageview');
+
+</script>
+</body>
+
+<?php require('template/footer.phtml') ?>
+

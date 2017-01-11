@@ -1,0 +1,56 @@
+<?php require('template/header.phtml') ?>
+
+
+<div id="basketWrapper">
+    <div id="baske1stDiv">
+        <?php
+        $totalPrice = 0;
+        $totalNumberOfItems = 0;
+
+        foreach ($view->basketDataSet as $basketData) {
+            echo '<form role="form" id="basket1stForm" name="basket1stForm" action="../basket.php" method="post">';
+            $bookID = $basketData->getBookID();
+            $bookDataSet = new BookDataSet();
+            $bookData = $bookDataSet->fetchSingleBook($bookID)[0];
+            echo '<p>' . '<img src="images/' . $bookData->getPhotoName() . '"alt="No Pic Available for this Book">' . '</p>';
+
+            echo '<br/>';
+            echo '<p><b>Title: </b>' . $bookData->getBookName() . '</p>';
+            echo '<p><b>Author: </b>' . $bookData->getBookAuthor() . '</p>';
+            echo '<p><b>Price: </b>£' . $bookData->getBookPrice() . '</p>';
+            echo '<p ><b>Selected Quantity: </b>' . $basketData->getQuantity() . '</p>';
+            echo '<p><b>No. In Stock: </b>' . $bookData->getNoInStock() . '</p>';
+            echo '<p><b>Total Price: </b>£' . $bookData->getBookPrice() * $basketData->getQuantity() . '</p>';
+            $totalPrice = $totalPrice + $bookData->getBookPrice() * $basketData->getQuantity();
+            $totalNumberOfItems = $totalNumberOfItems + $basketData->getQuantity();
+
+            echo '<input type="hidden" name="bookID" value="' . $basketData->getBookID() . '" id="editQtyTxtBox"/>';
+            echo '<p>' . '<input type="text" name="editQtyTxtBoxName" id="editQtyTxtBox" placeholder="#"/>' . '<button  type="submit"  value="submit" name="editQtyBtn" id="editQtyBtn" class="col-lg-offset-0">Edit Quantity</button>' . '</p>';
+            echo '<p>' . '<button type="submit" name="deleteQtyBtn" id="deleteQtyBtn">Remove From Basket</button>'
+                . '<button type="submit"  name="purchaseQtyBtn" id="purchaseQtyBtn">Purchase Item</button>' . '</p>';
+            echo '<hr>';
+
+            echo '</form>';
+        }
+        ?>
+    </div>
+    <div id="basket2ndDiv">
+        <div id="basketInnerDiv">
+            <p><b>Total Price: </b>£<?php echo $totalPrice ?></p>
+            <p><b>Total Number of Items: </b><?php echo $totalNumberOfItems ?></p>
+            <div id="finalButtons">
+                <form role="form" id="basket2stForm" name="basket2stForm" action="../basket.php" method="post">
+                    <p>
+                        <button type="submit" name="purchaseAllItemsBtn" id="purchaseAllBtn">Purchase All Items</button>
+                    </p>
+                    <p>
+                        <button type="submit" name="clearBasketBtn" id="clearAllBtn">Clear Basket</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<?php require('template/footer.phtml') ?>
